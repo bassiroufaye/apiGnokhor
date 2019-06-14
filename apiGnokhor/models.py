@@ -25,4 +25,15 @@ class Lunette(models.Model):
         """A string representation of the model."""
         return self.nom
 
+
+class Commande(models.Model):
+	Client_id = models.ForeignKey(Client, on_delete=models.CASCADE)
+	lunette_id = models.ForeignKey(Lunette, on_delete=models.CASCADE)
+	date = models.DateField()
+	nbre_lunettes = models.IntegerField()
+	montant_total = models.IntegerField()
+
+	
+		
+
 # Create your models here.

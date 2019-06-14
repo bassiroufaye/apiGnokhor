@@ -25,3 +25,15 @@ class LunetteSerializer(serializers.ModelSerializer):
             'photo',
         )
         model = models.Lunette
+
+class CommandeSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = (
+            'id',
+            'Client_id',
+            'lunette_id',
+            'date',
+            'nbre_lunettes',
+            'montant',
+        )
+        model = models.Commande

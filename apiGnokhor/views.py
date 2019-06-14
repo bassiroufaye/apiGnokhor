@@ -23,4 +23,12 @@ class DetailLunette(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Lunette.objects.all()
     serializer_class = serializers.LunetteSerializer
 
+class ListCommande(generics.ListCreateAPIView):
+    queryset = models.Commande.objects.all()
+    serializer_class = serializers.CommandeSerializer
+
+class DetailCommande(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Commande.objects.all()
+    serializer_class = serializers.CommandeSerializer
+
 # Create your views here.
